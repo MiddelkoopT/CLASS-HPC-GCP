@@ -117,3 +117,24 @@ module "slurm_cluster_compute" {
   zone                       = var.zone
 }
 
+resource "google_container_cluster" "class" {
+    name = "class-container-cluster"
+    count = 1
+    initial_node_count = 3
+    location = var.zone
+    network = var.network_name
+    subnetwork = var.subnetwork_name
+
+    release_channel {
+        channel = "RAPID"
+    }
+
+    node_config {
+        preemptible = true
+        machine_type = "e2-small"
+        metadata = {
+            disable-legacy-endpoints = true
+        }
+    }
+}
+
