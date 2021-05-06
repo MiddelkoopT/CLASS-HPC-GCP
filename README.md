@@ -1,7 +1,7 @@
 # CLASS-HPC-GCP
 Internet2 CLASS Capstone Project,  HPC-GCP Team 
 
-t is convenient to deploy an HPC cluster on the GCP cloud using terraform scripts. The scripts are inside the directory slurm-gcp. You need to edit the scripts - basic.tfvars and main.tf. For a basic deployment, it is sufficient to redefine a few variables such as project name, cluster name, etc. Of course, the variables and scripts can be fine tuned to fit your needs. 
+t is convenient to deploy an HPC cluster on the GCP cloud using terraform scripts. The scripts are inside the directory slurm-gcp. You need to edit the scripts - basic.tfvars and main.tf. For a basic deployment, it is sufficient to redefine a few variables such as project name, cluster name, etc. Of course, you can fine tune the variables and scripts to fit your needs. 
 
 * Create a GCP Project (for example, class-capstone)
 * Go to API services and enable the API for compute engines and deployment manager
@@ -17,5 +17,7 @@ t is convenient to deploy an HPC cluster on the GCP cloud using terraform script
 * SSH into the login node and check the slurm status (`sinfo`) or run some test jobs. 
 
 Note that the minimal disk-size is 20 GB to accommodate the size of the VM. If you wan’t more than 20 GB, that’s okay.  
+
+The above steps are explained in the document page: https://cloud.google.com/architecture/deploying-slurm-cluster-compute-engine
 
 
