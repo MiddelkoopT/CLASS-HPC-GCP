@@ -24,7 +24,7 @@ provider "google" {
 }
 
 module "slurm_cluster_network" {
-  source = "../../modules/network"
+  source = "../../slurm-gcp/tf/modules/network"
 
   cluster_name                  = var.cluster_name
   disable_login_public_ips      = var.disable_login_public_ips
@@ -40,7 +40,7 @@ module "slurm_cluster_network" {
 }
 
 module "slurm_cluster_controller" {
-  source = "../../modules/controller"
+  source = "../../slurm-gcp/tf/modules/controller"
 
   boot_disk_size                = var.controller_disk_size_gb
   boot_disk_type                = var.controller_disk_type
@@ -74,7 +74,7 @@ module "slurm_cluster_controller" {
 }
 
 module "slurm_cluster_login" {
-  source = "../../modules/login"
+  source = "../../slurm-gcp/tf/modules/login"
 
   boot_disk_size            = var.login_disk_size_gb
   boot_disk_type            = var.login_disk_type
@@ -100,7 +100,7 @@ module "slurm_cluster_login" {
 }
 
 module "slurm_cluster_compute" {
-  source = "../../modules/compute"
+  source = "../../slurm-gcp/tf/modules/compute"
 
   cluster_name               = var.cluster_name
   controller_name            = module.slurm_cluster_controller.controller_node_name
