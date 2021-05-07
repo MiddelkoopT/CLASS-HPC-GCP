@@ -81,9 +81,9 @@ login_disk_size_gb = 20
 
 partitions = [
   { name                 = "debug"
-    machine_type         = "n1-standard-2"
+    machine_type         = "c2-standard-4"
     static_node_count    = 0
-    max_node_count       = 10
+    max_node_count       = 5
     zone                 = "us-central1-c"
     image                = "projects/schedmd-slurm-public/global/images/family/schedmd-slurm-20-11-4-hpc-centos-7"
     image_hyperthreads   = false
