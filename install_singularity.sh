@@ -63,5 +63,5 @@ module-whatis   "Sets the environment for using Singularity ${VERSION}"
 set     topdir          /apps/singularity/${SINGULARITY_VERSION}
 set     version         ${SINGULARITY_VERSION}
 set     sys             linux86
-prepend-path    PATH            \$topdir/bin
+prepend-path    PATH            /apps/singularity/${SINGULARITY_VERSION}/bin
 SINGULARITY_MODULEFILE
