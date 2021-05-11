@@ -11,9 +11,9 @@ disable_login_public_ips      = false
 
 # suspend_time  = 300
 
-controller_machine_type = "n1-standard-2"
+controller_machine_type = "c2-standard-8"
 controller_image        = "projects/schedmd-slurm-public/global/images/family/schedmd-slurm-20-11-4-hpc-centos-7"
-controller_disk_type    = "pd-standard"
+controller_disk_type    = "pd-ssd"
 controller_disk_size_gb = 50
 # controller_labels = {
 #   key1 = "val1"
@@ -83,7 +83,7 @@ partitions = [
   { name                 = "debug"
     machine_type         = "c2-standard-4"
     static_node_count    = 0
-    max_node_count       = 5
+    max_node_count       = 4
     zone                 = "us-central1-c"
     image                = "projects/schedmd-slurm-public/global/images/family/schedmd-slurm-20-11-4-hpc-centos-7"
     image_hyperthreads   = false

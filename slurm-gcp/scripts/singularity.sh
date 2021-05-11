@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-yum  groupinstall -y 'Development Tools'
+yum groupinstall -y 'Development Tools'
 yum install -y \
      openssl-devel \
      libuuid-devel \
@@ -12,8 +12,8 @@ yum install -y \
 export GOLANG_VERSION=1.16.4
 export SINGULARITY_VERSION=3.7.0
 
-mkdir -p /opt/go/${GOLANG_VERSION}
-mkdir -p /opt/singularity/${SINGULARITY_VERSION}
+install -dvp /opt/go/${GOLANG_VERSION}
+install -dvp /opt/singularity/${SINGULARITY_VERSION}
 
 export OS=linux
 export ARCH=amd64
