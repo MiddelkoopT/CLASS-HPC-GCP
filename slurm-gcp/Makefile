@@ -6,19 +6,19 @@
 .PHONY: init plan apply destroy
 
 init:
-        terraform init
+	terraform init
 
 validate:
-        terraform validate
+	terraform validate
 
 plan:
-        terraform plan -var-file=basic.tfvars -var-file=local.tfvars -out terraform.tfplan
+	terraform plan -var-file=basic.tfvars -var-file=local.tfvars -out terraform.tfplan
 
 apply:
-        terraform apply -var-file=basic.tfvars -var-file=local.tfvars -auto-approve
+	terraform apply -var-file=basic.tfvars -var-file=local.tfvars -auto-approve
 
 destroy:
-        terraform destroy -var-file=basic.tfvars -var-file=local.tfvars -auto-approve
+	terraform destroy -var-file=basic.tfvars -var-file=local.tfvars -auto-approve
 
 show:
-        terraform show
+	terraform show
