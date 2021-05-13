@@ -120,6 +120,7 @@ module "slurm_cluster_compute" {
 ## Custom resources. TODO: Move to separate module.
 resource "google_container_cluster" "class" {
     name = "class-container-cluster"
+    depends_on = [module.slurm_cluster_network.subnet_depend]
     count = 1
     initial_node_count = 3
     location = var.zone
