@@ -15,5 +15,5 @@ gcloud compute ssh class-controller --zone=$ZONE  -- < scripts/controller.sh
 gcloud compute ssh class-controller --zone=$ZONE -- sudo -i < scripts/singularity.sh
 gcloud compute ssh class-controller --zone=$ZONE -- sudo -i < scripts/install_miniconda.sh
 gcloud compute ssh class-controller --zone=$ZONE -- < scripts/spack.sh
-gcloud compute ssh class-controller --zone=$ZONE -- < scripts/install_R.sh
-gcloud compute ssh class-controller --zone=$ZONE -- < scripts/install_Py.sh
+gcloud compute ssh class-controller --zone=$ZONE -- sudo -i < scripts/install_R.sh
+gcloud compute ssh class-controller --zone=$ZONE -- sudo -i < scripts/install_Py.sh
